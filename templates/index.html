@@ -1,0 +1,390 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="{% static 'img/favicon.png'%}">
+		<title>Fofana.</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/line-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	</head>
+	<body>
+		
+		<!-- loader -->
+		<div class="loader">
+	      	<div class="loading">
+		        <div class="spinner-grow aloader" role="status">
+		      		<span class="sr-only"></span>
+		    	</div>
+		    </div>
+	    </div>
+		<!-- end loader -->
+
+
+		<!-- navbar -->
+		<div id="navbar" class="navbar navbar-expand-lg">
+			<div class="container">
+				<a href="#" class="navbar-brand">Fofana<span>.</span></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			        <i class="la la-bars"></i>
+			    </button>
+
+			    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    	<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+						<li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+						<li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+						<li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+						<li class="nav-item"><a href="#contact" class="button">Hire us</a></li>
+					</ul>
+			    </div>
+			</div>
+		</div>
+		<!-- end navbar -->
+
+
+		<!-- intro -->
+		<div id="home" class="intro">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<div class="content">
+							{% for title in titles %}
+							<h5>{{ title.title }}</h5>
+							{% endfor %}
+							{% for text in text %}
+							<h1>{{text.title}}</h1>
+							{% endfor %}
+							{% for headerText in headerText %}
+							<p>{{headerText.body}}</p>
+							{% endfor %}
+							<ul>
+								<li><button class="button">Learn More</button></li>
+								<li><a href="#">See our work <i class="la la-arrow-right"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="content-image">
+							<img src="{% static 'img/person.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end intro -->
+
+		<!-- features -->
+		<div id="features" class="features">
+			<div class="container">
+				<div class="content">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="content-box">
+								<div class="icon">
+									<i class="las la-graduation-cap"></i>
+								</div>
+								<div class="text">
+									{% for about in about%}
+									<h5>{{about.title}}</h5>
+									<p>{{about.body}}</p>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="content-box">
+								<div class="icon">
+									<i class="la la-tty"></i>
+								</div>
+								<div class="text">
+									{% for about in about%}
+									<h5>{{about.title}}</h5>
+									<p>{{about.body}}</p>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="content-box">
+								<div class="icon">
+									<i class="la la-mouse"></i>
+								</div>
+								<div class="text">
+									{% for about in about%}
+									<h5>{{about.title}}</h5>
+									<p>{{about.body}}</p>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="content-box">
+								<div class="icon">
+									<i class="la la-biking"></i>
+								</div>
+								<div class="text">
+									{% for about in about%}
+									<h5>{{about.title}}</h5>
+									<p>{{about.body}}</p>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end features -->
+
+		<!-- services -->
+		<div id="services" class="services text-center">
+			<div class="container">
+				<div class="title">
+					<h5>Services</h5>
+					<h2>We provide the best services</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="content">
+							<i class="la la-edit"></i>
+							{% for services in services %}
+							<h5>{{services.title}}</h5>
+							<p>{{services.body}}</p>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="content content-center">
+							<i class="la la-code"></i>
+							{% for services in services %}
+							<h5>{{services.title}}</h5>
+							<p>{{services.body}}</p>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="content">
+							<i class="la la-bullhorn"></i>
+							{% for services in services %}
+							<h5>{{services.title}}</h5>
+							<p>{{services.body}}</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end services -->
+
+		<!-- portfolio -->
+		<div id="project" class="portfolio">
+			<div class="container">
+				<div class="title text-center">
+					<h5>Portfolio</h5>
+					<h2>See our awesome done project</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<a href="{% static 'img/portfolio1.jpg' %}" class="popup-image"><img src="{% static 'img/portfolio1.jpg' %}" alt=""></a>
+						<div class="text">
+							{%for portfolio in portfolio %}
+							<h5>{{portfolio.body}}</h5>
+							<p>{{portfolio.text}}</p>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="col-md-6">
+						<a href="{% static 'img/portfolio2.jpg' %}" class="popup-image"><img src="{% static 'img/portfolio2.jpg' %}" alt=""></a>
+						<div class="text">
+							{%for portfolio in portfolio %}
+							<h5>{{portfolio.body}}</h5>
+							<p>{{portfolio.text}}</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<a href="{% static 'img/portfolio3.jpg' %}" class="popup-image"><img src="{% static 'img/portfolio3.jpg' %}" alt=""></a>
+						<div class="text shadow-2xl">
+							{%for portfolio in portfolio %}
+							<h5>{{portfolio.body}}</h5>
+							<p>{{portfolio.text}}</p>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="col-md-6">
+						<a href="{% static 'img/portfolio4.jpg' %}" class="popup-image"><img src="{% static 'img/portfolio4.jpg' %}" alt=""></a>
+						<div class="text shadow-2xl">
+							{%for portfolio in portfolio %}
+							<h5>{{portfolio.body}}</h5>
+							<p>{{portfolio.text}}</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end portfolio -->
+
+		<!-- pricing -->
+		<div id="pricing" class="pricing">
+			<div class="container">
+				<div class="title">
+					<h5>Pricing</h5>
+					<h2>Choose our pricing</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="content shadow">
+							{% for price in price %}
+							<h5>{{price.body}}</h5>
+							<p>{{price.text}}</p>
+							<h2>{{price.price}}</h2>
+							{% endfor %}
+							<div class="divider"></div>
+							<ul>
+								<li><i class="la la-check"></i> Free Support</li>
+								<li><i class="la la-check"></i> Update</li>
+								<li><i class="la la-check"></i> Revision</li>
+								<li><i class="la la-check"></i> Unlimited</li>
+							</ul>
+							<button class="button">Get Started</button>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="content shadow content-center">
+							{% for price in price %}
+							<h5>{{price.body}}</h5>
+							<p>{{price.text}}</p>
+							<h2>{{price.price}}</h2>
+							{% endfor %}
+							<div class="divider"></div>
+							<ul>
+								<li><i class="la la-check"></i> Free Support</li>
+								<li><i class="la la-check"></i> Update</li>
+								<li><i class="la la-check"></i> Revision</li>
+								<li><i class="la la-check"></i> Unlimited</li>
+							</ul>
+							<button class="button">Get Started</button>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="content shadow">
+							{% for price in price %}
+							<h5>{{price.body}}</h5>
+							<p>{{price.text}}</p>
+							<h2>{{price.price}}</h2>
+							{% endfor %}
+							<div class="divider"></div>
+							<ul>
+								<li><i class="la la-check"></i> Free Support</li>
+								<li><i class="la la-check"></i> Update</li>
+								<li><i class="la la-check"></i> Revision</li>
+								<li><i class="la la-check"></i> Unlimited</li>
+							</ul>
+							<button class="button">Get Started</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end pricing -->
+
+		<!-- testimonial -->
+		<div id="testimonial" class="testimonial">
+			<div class="container">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="content shadow-2xl">
+								<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Voluptas quis vel asperiores incidunt illum placeat ab, ex iste reprehenderit ipsa commodi reiciendis</p>
+								<div class="icon">
+									<i class="las la-quote-right"></i>
+								</div>
+								<div class="text">
+									<h5>John Doe</h5>
+									<span>Directur</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="content shadow-2xl">
+								<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Voluptas quis vel asperiores incidunt illum placeat ab, ex iste reprehenderit ipsa commodi reiciendis</p>
+								<div class="icon">
+									<i class="las la-quote-right"></i>
+								</div>
+								<div class="text">
+									<h5>Mario</h5>
+									<span>Marketing</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="content shadow-2xl">
+								<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Voluptas quis vel asperiores incidunt illum placeat ab, ex iste reprehenderit ipsa commodi reiciendis</p>
+								<div class="icon">
+									<i class="las la-quote-right"></i>
+								</div>
+								<div class="text">
+									<h5>Wesley</h5>
+									<span>Programming</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="content shadow-2xl">
+								<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Voluptas quis vel asperiores incidunt illum placeat ab, ex iste reprehenderit ipsa commodi reiciendis</p>
+								<div class="icon">
+									<i class="las la-quote-right"></i>
+								</div>
+								<div class="text">
+									<h5>Rami</h5>
+									<span>Designer</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end testimonial -->
+
+		<!-- contact -->
+		<div id="contact" class="contact text-center">
+			<div class="container">
+				<h5>Give us a call</h5>
+				<h2>+61 3 8376 6284</h2>
+				<p>contact@domain.com </p>
+				<p> 121 King Street, Melbourne Victoria 3000 Australia </p>
+				<ul>
+					<li><a href=""><i class="la la-facebook"></i></a></li>
+					<li><a href=""><i class="la la-twitter"></i></a></li>
+					<li><a href=""><i class="la la-linkedin"></i></a></li>
+					<li><a href=""><i class="la la-youtube"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- end contact -->
+
+
+		<!-- script -->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+		<script src="{% static 'js/magnific-popup.min.js' %}"></script>
+		<script src="{% static 'js/swiper.min.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+		
+		
+	</body>
+</html>
